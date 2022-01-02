@@ -1,1 +1,12 @@
 TIL
+
+22.01.02
+순서가 있는 리스트 ol
+순서가 없는 리스트 ul
+리스트 li
+
+a 태그
+href : 링크
+target 기본값은 _self, 새탭은 _blank
+
+HTML문서는 HEAD 웹사이트의 환경설정, BODY 사용자가 보는 내용 으로 구성

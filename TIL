@@ -5,8 +5,15 @@ TIL
 순서가 없는 리스트 ul
 리스트 li
 
+img는 닫는 태그가 없다 ex)<img src="cooki.jpg" alt="" />
+src 안에 이미지 주소, 파일 이름(확장자까지) 넣는다.
+
 a 태그
 href : 링크
 target 기본값은 _self, 새탭은 _blank
 
+html 파일은 정해진 작성 형식과 문법이 있음
+<!DOCTYPE html> 으로 html 파일이라는 것을 알림
 HTML문서는 HEAD 웹사이트의 환경설정, BODY 사용자가 보는 내용 으로 구성
+
+head 태그는 보이지 않는 사이트 설정들을 만듬

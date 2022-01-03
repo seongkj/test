@@ -22,3 +22,8 @@ head 태그는 보이지 않는 사이트 설정들을 만듬
 22.01.03
 html tags 참고 사이트
 https://developer.mozilla.org/ko/docs/Web/HTML/Element
+tag를 전부 외울 필요 없음. 필요할 때 찾아서 사용
+id값은 고유해야하고 tag하나에 id는 하나만 사용
+label은 input과 쓰인다  label에 for, input에 id로 연동
+css사용시 id로 tag들을 구분하기 때문에 반드시 고유해야함
+

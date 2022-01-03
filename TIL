@@ -17,3 +17,8 @@ html 파일은 정해진 작성 형식과 문법이 있음
 HTML문서는 HEAD 웹사이트의 환경설정, BODY 사용자가 보는 내용 으로 구성
 
 head 태그는 보이지 않는 사이트 설정들을 만듬
+
+
+22.01.03
+html tags 참고 사이트
+https://developer.mozilla.org/ko/docs/Web/HTML/Element

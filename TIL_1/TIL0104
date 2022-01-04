@@ -1,0 +1,28 @@
+TIL 22.01.04
+
+구글에 css diner게임검색 https://flukeout.github.io/
+flex 익숙해지기좋은 게임 https://flexboxfroggy.com/#ko
+
+class
+class 는 id와 비슷한 용도로 사용됨 id는 #로 불러오고 class는 .으로 부름
+id처럼 고유하지 않아도 되고 하나의 tag에 여러개의 class를 보유가능
+class="aa bb" 이면 aa와 bb 두가지 클래스를 가지게 됨
+중복되는 id를 가지고 싶을 때 사용
+
+inline에서 margin은 좌우만 적용됨 padding은 전방향 적용
+높이가 넓이가 없음
+
+dispaly: inline-block;을 통해 옆에 다른 박스가 올수있으면서 높이와 넓이를 가지는 박스를 만들수있음
+하지만 방응형으로 쓰기 부적절 하므로 잘 쓰이지 않음
+
+flex
+inline-block을 사용하지 않고 flex를 자주 사용하게 됨(문제점이 많음)
+자식에 명시하지 않고 부모 박스에 dispaly:flex를 해준다.
+justify-content 는 주축으로 움직이고 (main axis를 움직임)가로)
+align-items는 교차축으로 움직인다. (cross axis를 움직임)세로)
+
+position
+position: fixed;를 사용하면 스크롤을 옮기는 등 화면을 이동해도 제자리에 위치한다.
+top, left 등을 이용해 다른 레이어에 두면 원래 위치를 무시하고 지정한 곳에 위치한다.
+relative는 박스의 처음 위치를 기준으로 top,left 등을 통해 위치가 이동됨
+absolute는 가장 가까운 relative한 부모를 기준으로 위치가 이동됨 만약 relative부모가 없다면 body를 기준으로 이동한다.

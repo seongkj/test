@@ -1,0 +1,48 @@
+TIL
+
+22.01.02
+순서가 있는 리스트 ol
+순서가 없는 리스트 ul
+리스트 li
+
+img는 닫는 태그가 없다 ex)<img src="cooki.jpg" alt="" />
+src 안에 이미지 주소, 파일 이름(확장자까지) 넣는다.
+
+a 태그
+href : 링크
+target 기본값은 _self, 새탭은 _blank
+
+html 파일은 정해진 작성 형식과 문법이 있음
+<!DOCTYPE html> 으로 html 파일이라는 것을 알림
+HTML문서는 HEAD 웹사이트의 환경설정, BODY 사용자가 보는 내용 으로 구성
+
+head 태그는 보이지 않는 사이트 설정들을 만듬
+
+
+22.01.03
+html tags 참고 사이트 구글html tags mdn검색
+https://developer.mozilla.org/ko/docs/Web/HTML/Element
+tag를 전부 외울 필요 없음. 필요할 때 찾아서 사용
+id값은 고유해야하고 tag하나에 id는 하나만 사용
+label은 input과 쓰인다  label에 for, input에 id로 연동
+css사용시 id로 tag들을 구분하기 때문에 반드시 고유해야함
+
+css를 html과 분리시켜 만들 때 html에 <link rel="stylesheet" href="css파일 명"/>으로 연결한다.
+css는 html의 속성을 부여시켜준다. 설정하고자 하는 태그를 지정하여 속성값을 부여해준다. id명, 태그 사용
+위에서 아래방향으로 적용되기 때문에 같은 태그에 속성을 두번 주면 마지막 속성값만 적용된다.
+block옆에는 아무것도 올 수 없다. inline옆에 연결해서 올 수 있다. 대부분 block이 많기 때문에 자주사용하는 inline은 알아두는게 편하다.
+display속성은 block와 inline을 변경할 수 있게한다.
+
+block의 세가지 특징 margin padding border
+margin 박스 경계의 바깥에 있는 공간
+margin: 10px; 으로 모든 방향 조절 가능, margin-방향: ; 으로 원하는 방향만 조절 가능
+margin: 위 오 아 왼 ; 으로 한번에 설정됨
+
+padding 박스경계의 안쪽에 있는 공간 (margin과 반대)
+margin과 사용법은 같음
+
+border 박스의 경계이고 block, inline모두 적용된다.
+
+id는 #를 통해 불러올 수 있음
+id값은 고유해야하고 tag하나에 id는 하나만 사용
+*는 전체를 뜻함

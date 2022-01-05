@@ -1,0 +1,43 @@
+TIL 22.01.05
+
+pseudo selector
+엘리먼트를 디테일 하게 선택할 수 있게해준다. id와 class를 무분별 하게 사용할필요가 없어짐
+:을 사용해 원하는 디테일을 선택
+id나 class를 #,.으로 불러오듯이 span:옵션 으로 사용
+EX)
+span:nth-child(n) {		//n번째 span만 적용
+background-color: teal;
+}
+span:nth-child(even) { //짝수 번째 span만 적용, odd 홀수만 적용
+background-color: teal;
+}
+input[type="password] type이 password인 input
+
+combinator
+p span {			//은 p안에 있는 모든 자식 span을 가리킨다
+        background-color: cornflowerblue;
+      }
+p+span : p 다음으로 오는 형제 엘리먼트인 span을 가리킨다		
+p>span : p 의 직속 자식에 있는 span만을 가리킨다.
+p~span : p 와 같은 형제에 있는 span
+
+state
+1 active : 클릭하고 있는 상태
+2 hover : 마우스가 대상 위에 있는 상태
+3 focus : 선택되어 있는 상태 (로그인 할 때 아이디, 비번 칸에 키보드로 입력 가능한 상태를 생각하면 됨)
+4 visited : 링크에 적용됨, 한번 방문한적이 있는 링크에 적용
+5 focus-within : 자식중 focuse된 자식이 있는 상태
+
+Variable - 변수
+css사용자 설정 변수 사용법 사이트 css custom properties검색
+https://developer.mozilla.org/en-US/docs/Web/CSS/Using_CSS_custom_properties
+--뒤에 변수 이름을 선언한다 빈자리는 -로 ex)--main-color: #aaaaaa;
+:root {
+        --main-color: #0658f0;		//:root에 변수 선언
+      }
+      p {
+        background-color: var(--main-color);		//var()안에 변수 입력하여 사용
+      }
+      a {
+        color: var(--main-color);			//var()안에 변수 입력하여 사용
+      }

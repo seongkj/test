@@ -105,7 +105,7 @@
 
 
 // //typeof a 타입 확인, parseInt 자료형 변환///
-const age = prompt("How old are you?");
+// const age = prompt("How old are you?");
 // console.log(age, typeof age, typeof parseInt(age));
 
 // const a = 1;
@@ -122,14 +122,55 @@ const age = prompt("How old are you?");
 
 //conditionals 조건문//////////////////
 //console.log(isNaN(age)); //isNaN()숫자인지 아닌지 booleans값으로 알려준다. 숫자면 false
-if(isNaN(age)||age < 0){
-    console.log("Please write a real positive number")
-} else if(age < 19){
-    console.log("You are too young.");
-} else if (age >= 20 && age < 50){
-    console.log("you can drink.");
-} else {
-    console.log("you can't drink.");
-}
+// if(isNaN(age)||age < 0){
+//     console.log("Please write a real positive number")
+// } else if(age < 19){
+//     console.log("You are too young.");
+// } else if (age >= 20 && age < 50){
+//     console.log("you can drink.");
+// } else {
+//     console.log("you can't drink.");
+// }
 //==는 자료형이 달라도 true가 될수있다. ex)0==false,1=='1' //true
 //===는 자료형도 같아야 한다. ex)0===false, 1==='1'//false가 됨 자료형이 다르기 때문
+
+// document.title = 'asdf';
+
+//22.02.10
+
+// const title = document.getElementById("title");
+// const hellos = document.getElementsByClassName("hello");
+// console.dir(title);
+// console.log(hellos);
+
+// const title = document.getElementsByTagName("h1"); 
+// console.log(title)
+
+const h1 = document.querySelector("div.hello:first-child h1"); //css 방식으로 불러올 수 있다.
+console.dir(h1);             //여러개가 있다면 첫번째 하나만 가져옴
+//const title = document.querySelectorAll(".hello h1"); //all을 붙이면 전부 가져옴
+
+
+function handleTitleClick() {
+    console.log("title was clicked!");
+    h1.style.color = "blue";
+    h1.innerText = "클릭";
+}
+function handleMouseEnter(){
+    console.log("mouse is");
+    h1.innerText = "올라감";
+}
+function handleMouseLeave(){
+    h1.innerText = "내려감";
+}
+
+h1.addEventListener("click", handleTitleClick);  //클릭하면 함수 작동
+h1.addEventListener("mouseenter",handleMouseEnter);//마우스가 올라가면 함수 작동
+h1.addEventListener("mouseleave",handleMouseLeave);//마우스가 내려가면 함수 작동
+
+// h1.onclick = handleTitleClick;//위 클릭 이벤트와 같은 결과
+
+function handleWindowResize() {
+    document.body.style.backgroundColor = "tomato";
+}
+window.addEventListener("resize", handleWindowResize);

@@ -146,31 +146,80 @@
 // const title = document.getElementsByTagName("h1"); 
 // console.log(title)
 
-const h1 = document.querySelector("div.hello:first-child h1"); //css 방식으로 불러올 수 있다.
-console.dir(h1);             //여러개가 있다면 첫번째 하나만 가져옴
-//const title = document.querySelectorAll(".hello h1"); //all을 붙이면 전부 가져옴
+// const h1 = document.querySelector("div.hello:first-child h1"); //css 방식으로 불러올 수 있다.
+// console.dir(h1);             //여러개가 있다면 첫번째 하나만 가져옴
+// //const title = document.querySelectorAll(".hello h1"); //all을 붙이면 전부 가져옴
 
 
-function handleTitleClick() {
-    console.log("title was clicked!");
-    h1.style.color = "blue";
-    h1.innerText = "클릭";
+// function handleTitleClick() {
+//     console.log("title was clicked!");
+//     h1.style.color = "blue";
+//     h1.innerText = "클릭";
+// }
+// function handleMouseEnter(){
+//     console.log("mouse is");
+//     h1.innerText = "올라감";
+// }
+// function handleMouseLeave(){
+//     h1.innerText = "내려감";
+// }
+
+// h1.addEventListener("click", handleTitleClick);  //클릭하면 함수 작동
+// h1.addEventListener("mouseenter",handleMouseEnter);//마우스가 올라가면 함수 작동
+// h1.addEventListener("mouseleave",handleMouseLeave);//마우스가 내려가면 함수 작동
+
+// // h1.onclick = handleTitleClick;//위 클릭 이벤트와 같은 결과
+
+// function handleWindowResize() {
+//     document.body.style.backgroundColor = "tomato";
+// }
+// window.addEventListener("resize", handleWindowResize);
+
+//22.02.11
+
+// const h1 = document.querySelector("div.hello:first-child h1");//1.element 를 찾아
+
+// function handleTitleClick() {       //3.이벤트에 반응해
+//     const currentColor = h1.style.color;
+//     let newColor;
+//     if (currentColor === "blue"){
+//         newColor = "tomato";
+//     } else {
+//         newColor = "blue";
+//     }
+//     h1.style.color = newColor;
+// }
+// h1.addEventListener("click",handleTitleClick); //2.event를 listen 해라
+//js만으로 해줄 수 있지만 좋지않아 스타일링은 css에서 하고 html에 import하는게 좋아
+////////////////////////////////////////////////////////////
+
+// const h1 = document.querySelector("div.hello:first-child h1");
+// function handleTitleClick() {     
+//     const clickedClass = "clicked" //이렇게 변수를 만들어 주지 않고 클래스 네임을
+//     if(h1.className === clickedClass) { //여기에 바로 넣어줘도 되지만 실수할 수 있음
+//         h1.className = "";
+//     } else {
+//         h1.className = clickedClass;
+//     }
+// }
+// h1.addEventListener("click",handleTitleClick);
+
+//classList
+// const h1 = document.querySelector("div.hello:first-child h1");
+// function handleTitleClick() {     
+//     const clickedClass = "clicked"
+//     if(h1.classList.contains(clickedClass)) { //지정한 값이 엘리먼트 class에 있는지 확인
+//         h1.classList.remove(clickedClass);//지정한 값을 제거
+//     } else {
+//         h1.classList.add(clickedClass);//지정한 값을 추가
+//     }
+// }
+// h1.addEventListener("click",handleTitleClick);
+
+//toggle = 위의 과정을 한번에 할수있다. 지정값이 있으면 제거 없으면 추가.
+const h1 = document.querySelector("div.hello:first-child h1");
+function handleTitleClick() {     
+    const clickedClass = "clicked"
+    h1.classList.toggle(clickedClass);
 }
-function handleMouseEnter(){
-    console.log("mouse is");
-    h1.innerText = "올라감";
-}
-function handleMouseLeave(){
-    h1.innerText = "내려감";
-}
-
-h1.addEventListener("click", handleTitleClick);  //클릭하면 함수 작동
-h1.addEventListener("mouseenter",handleMouseEnter);//마우스가 올라가면 함수 작동
-h1.addEventListener("mouseleave",handleMouseLeave);//마우스가 내려가면 함수 작동
-
-// h1.onclick = handleTitleClick;//위 클릭 이벤트와 같은 결과
-
-function handleWindowResize() {
-    document.body.style.backgroundColor = "tomato";
-}
-window.addEventListener("resize", handleWindowResize);
+h1.addEventListener("click",handleTitleClick);

@@ -217,9 +217,24 @@
 // h1.addEventListener("click",handleTitleClick);
 
 //toggle = 위의 과정을 한번에 할수있다. 지정값이 있으면 제거 없으면 추가.
-const h1 = document.querySelector("div.hello:first-child h1");
-function handleTitleClick() {     
-    const clickedClass = "clicked"
-    h1.classList.toggle(clickedClass);
-}
-h1.addEventListener("click",handleTitleClick);
+// const h1 = document.querySelector("div.hello:first-child h1");
+// function handleTitleClick() {     
+//     const clickedClass = "clicked"
+//     h1.classList.toggle(clickedClass);
+// }
+// h1.addEventListener("click",handleTitleClick);
+
+const readline = require("readline");
+
+const rl = readline.createInterface({
+  input: process.stdin,
+  output: process.stdout,
+});
+let input;
+rl.on("line", (line) => { 
+    input = line.split(' ');
+    rl.close();
+});
+rl.on('close', () => {
+    console.log(input[0]-input[1]);
+})
